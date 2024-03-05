@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(
-    JSON.parse(localStorage.getItem("user")) || true
+    JSON.parse(sessionStorage.getItem("user")) || false
   );
   return (
     <>

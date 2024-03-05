@@ -3,8 +3,8 @@ import  useLogin  from "../hooks/useLogin";
 import useField from "../hooks/useField";
 
 const LoginComponent = ({ setIsAuthenticated }) => {
-  const emailInput = useField("email");
-  const passwordInput = useField("password");
+  const emailInput = useField("");
+  const passwordInput = useField("");
 
   const { handleLogin } = useLogin(setIsAuthenticated);
 
@@ -17,13 +17,13 @@ const LoginComponent = ({ setIsAuthenticated }) => {
       <h2>Login</h2>
       <label>
         email:
-        <input type="email" {...emailInput} />
+        <input type="email" placeholder='write your email'{...emailInput} />
       </label>
       <br />
       <label>
         Password:
         <input
-          type="password" {...passwordInput}/>
+          type="password" placeholder='write password'{...passwordInput}/>
       </label>
       <br />
       <button onClick={handler}>Login</button>
